@@ -142,8 +142,12 @@ input[type="search"]::-webkit-search-cancel-button {
 
 .navigation{
     position: absolute;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
     bottom: 0;
-    width: 100%;
+    max-width: 500px;
     display: flex;
     justify-content: center;
     align-items: center;

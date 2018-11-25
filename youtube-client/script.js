@@ -17,7 +17,7 @@ function search() {
     .then(() => swipePage());
 }
 
-submitInput.addEventListener('click', search);
+document.getElementsByClassName('search-btn')[0].addEventListener('click', search);
 
 
 function getOutput(item) {
