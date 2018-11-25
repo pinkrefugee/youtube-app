@@ -28,3 +28,21 @@ videosContainer.id = 'results';
 
 videosList.appendChild(videosContainer);
 document.body.appendChild(videosList);
+
+const navigationDiv = document.createElement('div');
+navigationDiv.classList.add('navigation');
+const leftButton = document.createElement('button');
+leftButton.classList.add('prev');
+const dotsDiv = document.createElement('div');
+dotsDiv.classList.add('dots');
+const rightButton = document.createElement('button');
+rightButton.classList.add('next');
+navigationDiv.appendChild(leftButton);
+navigationDiv.appendChild(dotsDiv);
+navigationDiv.appendChild(rightButton);
+
+document.body.appendChild(navigationDiv);
+
+navigationDiv.style.visibility = "hidden";
+
+
