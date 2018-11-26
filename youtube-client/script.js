@@ -15,9 +15,13 @@ function search() {
     .then(() => addNavigation()).then(() => setArrowsListeners())
     .then(() => addMediaListeners())
     .then(() => swipePage());
+    let vList = document.getElementsByClassName('videos-list')[0];
+    let temp = vList.cloneNode(true);
+    vList.parentNode.replaceChild(temp, vList);
 }
 
 document.getElementsByClassName('search-btn')[0].addEventListener('click', search);
+
 
 
 function getOutput(item) {
