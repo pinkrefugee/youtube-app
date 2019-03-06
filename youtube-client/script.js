@@ -46,7 +46,7 @@ function getOutput(item) {
 function getVideoViews(id) {
   const url2 = new URL('https://www.googleapis.com/youtube/v3/videos');
   const params2 = {
-    part: 'statistics', type: 'video', id, key: 'AIzaSyByx6vycUSOJvm5lh8quiEFAQPemW80gyM',
+    part: 'statistics', type: 'video', id, key: 'AIzaSyBh2a0FKls24uMDCr_zwmAKyn7IqRHoPak',
   };
   Object.keys(params2).forEach(key => url2.searchParams.append(key, params2[key]));
 
@@ -70,7 +70,7 @@ function getVideoViews(id) {
 function fillDom(q) {
   const url = new URL('https://www.googleapis.com/youtube/v3/search');
   const params = {
-    part: 'snippet, id', q, type: 'video', maxResults: 15, key: 'AIzaSyByx6vycUSOJvm5lh8quiEFAQPemW80gyM',
+    part: 'snippet, id', q, type: 'video', maxResults: 15, key: 'AIzaSyBh2a0FKls24uMDCr_zwmAKyn7IqRHoPak',
   };
   Object.keys(params).forEach(key => url.searchParams.append(key, params[key]));
   return fetch(url).then(response => response.json()).then((data) => {
@@ -175,7 +175,7 @@ function loadNewChunk() {
 function getVideos(t) {
   const url = new URL('https://www.googleapis.com/youtube/v3/search');
   const params = {
-    part: 'snippet, id', q, pageToken: t, type: 'video', maxResults: 15, key: 'AIzaSyByx6vycUSOJvm5lh8quiEFAQPemW80gyM',
+    part: 'snippet, id', q, pageToken: t, type: 'video', maxResults: 15, key: 'AIzaSyBh2a0FKls24uMDCr_zwmAKyn7IqRHoPak',
   };
   Object.keys(params).forEach(key => url.searchParams.append(key, params[key]));
   return fetch(url).then(response => response.json()).then((data) => {
